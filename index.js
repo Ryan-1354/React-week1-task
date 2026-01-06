@@ -58,7 +58,6 @@ function App(){
   },
 ];
     return(
-        <>  
         <div className="row mt-5">
             <div className='col-6'>
                 <h2>產品列表</h2>
@@ -99,7 +98,7 @@ function App(){
                         <h5 className="card-text d-flex flex-wrap">更多圖片：</h5>
                         <div className="d-flex flex-wrap">
                             {tempProduct.imagesUrl.map((item, index)=>(
-                            <img key={item.index} src={item}/>
+                            <img key={item.index} src={item} alt={item.title}/>
                             ))}
                         </div>
                     </div>
@@ -107,7 +106,6 @@ function App(){
                  : <p>選擇商品查看詳情</p>}
             </div>
         </div>
-        </>
     )
 }
 const root=ReactDOM.createRoot(document.getElementById('root'));
